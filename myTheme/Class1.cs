@@ -27,33 +27,51 @@ namespace myTheme
             this.origin = origin;
         }
 
-        // Второй конструктор
-        public PawnShopAntique(int id, string name, decimal marketValue, decimal loanValue)
+        /// <summary>
+        /// второй конструктор
+        /// </summary>
+        public PawnShopAntique(string name, decimal marketValue, decimal loanValue)
             : this(name, marketValue, loanValue, "неизветсно", "неизветсно", "неизвестно") { }
 
+        /// <summary>
+        /// переназначение методы вывода информации по товару
+        /// </summary>
         public override string GetDescription()
         {
             return $"{name}: эпоха {era}, значимость: {historicalValue}, происхождение: {origin}, стоимость {marketValue:C}";
         }
 
+        /// <summary>
+        /// проверка на подлинность
+        /// </summary>
+        /// <returns></returns>
         public bool VerifyAuthenticity()
         {
             Console.WriteLine($"{name}: проверка подлинности завершена.");
             return true;
         }
 
+        /// <summary>
+        /// обновление данных занчимости 
+        /// </summary>
         public void UpdateHistoricalValue(string newValue)
         {
             historicalValue = newValue;
             Console.WriteLine($"Историческая значимость {name} обновлена: {historicalValue}.");
         }
 
+        /// <summary>
+        /// новое происхождение
+        /// </summary>
         public void UpdateOrigin(string newOrigin)
         {
             origin = newOrigin;
             Console.WriteLine($"Происхождение {name} обновлено: {origin}.");
         }
 
+        /// <summary>
+        /// инфо 
+        /// </summary>
         public void PrintAntiqueDetails()
         {
             Console.WriteLine($"Антиквариат: {name}, Эпоха: {era}, Значимость: {historicalValue}, Происхождение: {origin}, Сумма займа: {loanValue}");

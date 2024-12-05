@@ -9,16 +9,16 @@ namespace laba
     class Building
     {
         private static uint lastBuildingId = 0;
-        private uint buildingId;
-        private double height;
-        private uint floors;
-        private uint apartments;
-        private uint entrances;
+        private uint buildingId { get; set; }
+        private double height { get; set; }
+        private uint floors { get; set; }
+        private uint apartments { get; set; }
+        private uint entrances { get; set; }
 
 
         public Building(double height, uint floors, uint apartments, uint entrances)
         {
-            this.buildingId = GenerateBuildingId();
+            buildingId = GenerateBuildingId();
             this.height = height;
             this.floors = floors;
             this.apartments = apartments;
@@ -32,33 +32,66 @@ namespace laba
             return lastBuildingId;
         }
 
-        // Методы для получения значений полей
+        /// <summary>
+        /// установка значений
+        /// </summary>
+        public void SetID(uint id) => buildingId = id;
+        public void SetHeight(uint newHeight) => height = newHeight;
+        public void SetFloors(uint newFloors) => floors = newFloors;
+        public void SetApartments(uint newApartments) => height = newApartments;
+        public void SetEntrances(uint newEntrances) => entrances = newEntrances;
+
+        /// <summary>
+        /// генерирование id
+        /// </summary>
         public uint GetBuildingId()
         {
             return buildingId;
         }
+
+        /// <summary>
+        /// вывод высоты
+        /// </summary>
         public double GetHeight()
         {
             return height;
         }
+
+        /// <summary>
+        /// вывод кол-во этажей
+        /// </summary>
         public uint GetFloors()
         {
             return floors;
         }
+
+        /// <summary>
+        /// вывод кол-во квартир
+        /// </summary>
         public uint GetApartments()
         {
             return apartments;
         }
+
+        /// <summary>
+        /// вывод кол-во подъездов
+        /// </summary>
         public uint GetEntrances()
         {
             return entrances;
         }
 
-        // Методы для расчётов
+        /// <summary>
+        /// расчет высоты
+        /// </summary>
         public double GetFloorHeight()
         {
             return height / floors;
         }
+
+        /// <summary>
+        /// кол-во этажей в подъезде
+        /// </summary>
         public uint GetApartmentsPerEntrance()
         {
             return apartments / entrances;
@@ -67,7 +100,10 @@ namespace laba
         {
             return apartments / (floors * entrances);
         } 
-
+        
+        /// <summary>
+        /// вывод информации
+        /// </summary>
         public void PrintInfo()
         {
             Console.WriteLine($"Здание ID: {buildingId}");

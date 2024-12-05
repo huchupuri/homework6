@@ -50,7 +50,9 @@ namespace myTheme
         }
 
 
-
+        /// <summary>
+        /// обновление материала
+        /// </summary>
         public void UpdateMaterial(string newMaterial)
         {
             material = newMaterial;

@@ -12,7 +12,7 @@ namespace myTheme
     /// </summary>
     class PawnShopTechnique : PawnShopItem
     {
-        public string brand { get; set; } 
+        public string brand { get; set; }
         private string model { get; set; } 
         public string condition { get; set; }
 
@@ -53,7 +53,7 @@ namespace myTheme
         /// <summary>
         /// проверка на возможность займа
         /// </summary>
-        public bool IaAbleForLoan(decimal value)
+        public bool IsAbleForLoan(decimal value)
         {
             return marketValue >= value;
         }
