@@ -12,9 +12,11 @@ namespace myTheme
     /// </summary>
     class PawnShopTechnique : PawnShopItem
     {
+        #region
         public string brand { get; set; }
         private string model { get; set; } 
         public string condition { get; set; }
+        #endregion
 
         /// <summary>
         ///конструктор

@@ -12,9 +12,11 @@ namespace myTheme
     /// </summary>
     class PawnShopAntique : PawnShopItem
     {
+        #region
         public string era { get; set; } 
         public string historicalValue { get; set; } 
-        public string origin { get; private set; } 
+        public string origin { get; private set; }
+        #endregion
 
         /// <summary>
         /// конструктор антиквара

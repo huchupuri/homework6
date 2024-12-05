@@ -8,12 +8,14 @@ namespace myTheme
 {
     abstract class PawnShopItem
     {
+        #region
         private static int lastId = 1; 
         private int id; 
         public string name { get; set; } 
         public decimal marketValue { get; set; } 
         public decimal loanValue { get; private set; } 
-        public bool isRedeemed { get; private set; } 
+        public bool isRedeemed { get; private set; }
+        #endregion
 
         /// <summary>
         /// конструктор товара

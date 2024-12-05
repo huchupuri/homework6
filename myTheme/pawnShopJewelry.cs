@@ -12,9 +12,11 @@ namespace myTheme
     /// </summary>
     class PawnShopJewelry : PawnShopItem
     {
+        #region
         public string material { get; private set; } 
         private double weight { get; set; } 
-        public int purity { get; set; } 
+        public int purity { get; set; }
+        #endregion
 
         /// <summary>
         /// конструктор
