@@ -9,7 +9,7 @@ namespace myTheme
     abstract class PawnShopItem
     {
         private static int lastId = 1; 
-        private int id= 0; 
+        private int id; 
         public string name { get; set; } 
         public decimal marketValue { get; set; } 
         public decimal loanValue { get; private set; } 
