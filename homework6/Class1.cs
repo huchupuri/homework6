@@ -14,7 +14,7 @@ namespace homework6
     /// <summary>
     /// класс банковского счета
     /// </summary>
-    public class BankAccount
+    class BankAccount
     {
         private uint id;
         private static uint autoID = 0;

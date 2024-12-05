@@ -9,7 +9,7 @@ namespace laba
     {
         static void Main()
         {
-            //Task1();
+            Task1();
             Task2();
         }
         static void Task1()
