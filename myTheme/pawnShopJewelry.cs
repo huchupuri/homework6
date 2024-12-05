@@ -16,7 +16,9 @@ namespace myTheme
         private double weight { get; set; } 
         public int purity { get; set; } 
 
-        // Первый конструктор
+        /// <summary>
+        /// конструктор
+        /// </summary>
         public PawnShopJewelry(string name, decimal marketValue, decimal loanValue, string material, double weight, int purity)
             : base(name, marketValue, loanValue)
         {
@@ -25,15 +27,23 @@ namespace myTheme
             this.purity = purity;
         }
 
-
+        /// <summary>
+        ///конструктор, если не указали часть даннх
+        /// </summary>
         public PawnShopJewelry(string name, decimal marketValue, decimal loanValue)
             : this(name, marketValue, loanValue, "не указан", 0, 0) { }
 
+        /// <summary>
+        /// получить описание
+        /// </summary>
         public override string GetDescription()
         {
             return $"{name}: {material}, вес {weight} г, проба {purity}, стоимость {marketValue}";
         }
 
+        /// <summary>
+        /// посчитать стоимость
+        /// </summary>
         public decimal CalculateGoldValue(decimal pricePerGram)
         {
             return (decimal) weight * pricePerGram * purity / 100;

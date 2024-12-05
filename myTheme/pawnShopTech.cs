@@ -16,7 +16,9 @@ namespace myTheme
         private string model { get; set; } 
         public string condition { get; set; }
 
-        // Первый конструктор
+        /// <summary>
+        ///конструктор
+        /// </summary>
         public PawnShopTechnique(string name, decimal marketValue, decimal loanValue, string brand, string model, string condition)
             : base(name, marketValue, loanValue)
         {
@@ -25,15 +27,23 @@ namespace myTheme
             this.condition = condition;
         }
 
-        // Второй конструктор
+        /// <summary>
+        ///конструктор, если не указали часть даннх
+        /// </summary>
         public PawnShopTechnique(string name, decimal marketValue, decimal loanValue)
-            : this(name, marketValue, loanValue, "Unknown", "Unknown", "Good") { }
+            : this(name, marketValue, loanValue, "неизветсно", "неизвестно", "неизвестно") { }
 
+        /// <summary>
+        /// получтиь описание
+        /// </summary>
         public override string GetDescription()
         {
             return $"{name}: {brand} {model}, состояние: {condition}, стоимость {marketValue}";
         }
 
+        /// <summary>
+        /// обновить информацию по состоянию
+        /// </summary>
         public void UpdateCondition(string newCondition)
         {
             condition = newCondition;

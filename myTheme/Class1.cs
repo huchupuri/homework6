@@ -29,7 +29,7 @@ namespace myTheme
 
         // Второй конструктор
         public PawnShopAntique(int id, string name, decimal marketValue, decimal loanValue)
-            : this(name, marketValue, loanValue, "Unknown", "No Data", "Unknown") { }
+            : this(name, marketValue, loanValue, "неизветсно", "неизветсно", "неизвестно") { }
 
         public override string GetDescription()
         {
@@ -38,7 +38,6 @@ namespace myTheme
 
         public bool VerifyAuthenticity()
         {
-            // Простая проверка (пример)
             Console.WriteLine($"{name}: проверка подлинности завершена.");
             return true;
         }
